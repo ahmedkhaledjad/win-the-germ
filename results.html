@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>نتيجتك النهائية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="results-screen">
+        <h1>🎉 مبروك عليك!</h1>
+        <h2 id="playerNameResult"></h2>
+        <p id="scoreResult"></p>
+        <button onclick="restartGame()">إعادة اللعب 🔁</button>
+    </div>
+
+    <script>
+        const playerName = localStorage.getItem("playerName") || "لاعب مجهول";
+        const latestScore = localStorage.getItem("latestScore") || 0;
+
+        document.getElementById("playerNameResult").textContent = `👏 أحسنت يا ${playerName}!`;
+        document.getElementById("scoreResult").textContent = `✅ أجبت على ${latestScore} من 20 سؤال صحيح.`;
+
+        function restartGame() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>

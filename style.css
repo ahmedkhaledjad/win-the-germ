@@ -1,0 +1,88 @@
+body {
+    background: url('assets/hospital_bg.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.start-screen, .game-screen, .results-screen {
+    margin-top: 80px;
+}
+
+.germ-icon {
+    width: 150px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 22px;
+    border-radius: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#questionText {
+    font-size: 28px;
+    margin: 20px;
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.answer-btn {
+    width: 70%;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+}
+
+.correct {
+    background-color: #4CAF50 !important;
+}
+
+.wrong {
+    background-color: #f44336 !important;
+}
+
+.helpers {
+    margin-top: 20px;
+}
+
+#progress-bar {
+    width: 80%;
+    height: 20px;
+    background: rgba(255,255,255,0.3);
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: gold;
+    transition: width 0.5s ease;
+}
